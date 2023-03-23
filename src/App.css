@@ -10,3 +10,8 @@
   border-radius: 20px;
   text-align: center;
 }
+
+.ListOfTasks{
+  display: flex;
+  flex-direction: column;
+}
