@@ -8,8 +8,6 @@ function App() {
 
   const [tasks, setTasks] = useState([["jeden", false], ["dwa", true], ["trzy", false]]);
 
-  console.log(tasks);
-
   return (
     <div className="App">
       <h1>Welcome to my To Do List!</h1>
@@ -18,7 +16,7 @@ function App() {
         <hr></hr>
         <ToDoList tasks={tasks} setTasks={setTasks}/>
         <hr></hr>
-        <NewTask/>
+        <NewTask tasks={tasks} setTasks={setTasks}/>
       </div>
       <h4 style={{ 'textDecoration': 'underline'}}>Mikołaj 🅱enzel</h4>
     </div>
