@@ -1,7 +1,7 @@
-function Filter(){
+function Filter({ showDone, setShowDone }){
     return(
         <>
-            <input type={'checkbox'}></input>hide completed
+            <input onChange={() => {setShowDone(!showDone)}} type={'checkbox'}></input>hide completed
         </>
     );
 }

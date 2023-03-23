@@ -6,15 +6,16 @@ import { useState } from 'react';
 
 function App() {
 
-  const [tasks, setTasks] = useState([["jeden", false], ["dwa", true], ["trzy", false]]);
+  const [tasks, setTasks] = useState([]);
+  const [showDone, setShowDone] = useState(true);
 
   return (
     <div className="App">
       <h1>Welcome to my To Do List!</h1>
       <div className='Container'>
-        <Filter/>
+        <Filter showDone={showDone} setShowDone={setShowDone} />
         <hr></hr>
-        <ToDoList tasks={tasks} setTasks={setTasks}/>
+        <ToDoList tasks={tasks} setTasks={setTasks} showDone={showDone}/>
         <hr></hr>
         <NewTask tasks={tasks} setTasks={setTasks}/>
       </div>
